@@ -1,0 +1,85 @@
+Script started on 2023-05-02 11:50:31+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="120" LINES="30"]
+[?2004h]0;jshah@TIGER01935: ~[01;32mjshah@TIGER01935[00m:[01;34m~[00m$ [7mgit clone https://github.com/tonychacon/blink[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit clone https://github.com/tonychacon/blink
+[?2004lCloning into 'blink'...
+remote: Enumerating objects: 23, done.[K
+remote: Total 23 (delta 0), reused 0 (delta 0), pack-reused 23[K
+Receiving objects:   4% (1/23)Receiving objects:   8% (2/23)Receiving objects:  13% (3/23)Receiving objects:  17% (4/23)Receiving objects:  21% (5/23)Receiving objects:  26% (6/23)Receiving objects:  30% (7/23)Receiving objects:  34% (8/23)Receiving objects:  39% (9/23)Receiving objects:  43% (10/23)Receiving objects:  47% (11/23)Receiving objects:  52% (12/23)Receiving objects:  56% (13/23)Receiving objects:  60% (14/23)Receiving objects:  65% (15/23)Receiving objects:  69% (16/23)Receiving objects:  73% (17/23)Receiving objects:  78% (18/23)Receiving objects:  82% (19/23)Receiving objects:  86% (20/23)Receiving objects:  91% (21/23)Receiving objects:  95% (22/23)Receiving objects: 100% (23/23)Receiving objects: 100% (23/23), done.
+Resolving deltas:   0% (0/5)Resolving deltas:  20% (1/5)Resolving deltas:  40% (2/5)Resolving deltas:  60% (3/5)Resolving deltas:  80% (4/5)Resolving deltas: 100% (5/5)Resolving deltas: 100% (5/5), done.
+[?2004h]0;jshah@TIGER01935: ~[01;32mjshah@TIGER01935[00m:[01;34m~[00m$ [7mcd blink[27mcd blink
+[?2004l[?2004h]0;jshah@TIGER01935: ~/blink[01;32mjshah@TIGER01935[00m:[01;34m~/blink[00m$ [7mgit checkout -b slow-blink[27mgit checkout -b slow-blink
+[?2004lSwitched to a new branch 'slow-blink'
+[?2004h]0;jshah@TIGER01935: ~/blink[01;32mjshah@TIGER01935[00m:[01;34m~/blink[00m$ [7msed -i 's/1000/3000/' blink.ino[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csed -i 's/1000/3000/' blink.ino
+[?2004l[?2004h]0;jshah@TIGER01935: ~/blink[01;32mjshah@TIGER01935[00m:[01;34m~/blink[00m$ [7mgit diff --word-diff[27mgit diff --word-diff
+[?2004l[?1h=[1mdiff --git a/blink.ino b/blink.ino[m[m
+[1mindex 15b9911..a6cc5a5 100644[m[m
+[1m--- a/blink.ino[m[m
+[1m+++ b/blink.ino[m[m
+[36m@@ -18,7 +18,7 @@[m [mvoid setup() {[m[m
+// the loop routine runs over and over again forever:[m[m
+void loop() {[m[m
+  digitalWrite(led, HIGH);   // turn the LED on (HIGH is the voltage level)[m[m
+  [31m[-delay(1000);-][m[32m{+delay(3000);+}[m               // wait for a second[m
+  digitalWrite(led, LOW);    // turn the LED off by making the voltage LOW[m[m
+  [31m[-delay(1000);-][m[32m{+delay(3000);+}[m               // wait for a second[m
+}[m[m
+[K[?1l>[?2004h]0;jshah@TIGER01935: ~/blink[01;32mjshah@TIGER01935[00m:[01;34m~/blink[00m$ [7mgit commit -a -m 'Change delay to 3 seconds'[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit commit -a -m 'Change delay to 3 seconds'
+[?2004l[slow-blink 9ba0362] Change delay to 3 seconds
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[?2004h]0;jshah@TIGER01935: ~/blink[01;32mjshah@TIGER01935[00m:[01;34m~/blink[00m$ [7mgit push origin slow-blink[27mgit push origin slow-blink
+[?2004lUsername for 'https://github.com': jaiminshah2023
+Password for 'https://jaiminshah2023@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/tonychacon/blink/'
+[?2004h]0;jshah@TIGER01935: ~/blink[01;32mjshah@TIGER01935[00m:[01;34m~/blink[00m$ [7mcd ~/.ssh[27mcd ~/.ssh
+[?2004lbash: cd: /home/jshah/.ssh: No such file or directory
+[?2004h]0;jshah@TIGER01935: ~/blink[01;32mjshah@TIGER01935[00m:[01;34m~/blink[00m$ cd ..
+[?2004l[?2004h]0;jshah@TIGER01935: ~[01;32mjshah@TIGER01935[00m:[01;34m~[00m$ cd [K[K[Kls
+[?2004l[0m[01;34mblink[0m  my_github_session_1  my_github_session_2  my_unix_session  my_unix_session_1
+[?2004h]0;jshah@TIGER01935: ~[01;32mjshah@TIGER01935[00m:[01;34m~[00m$ cd ..
+[?2004l[?2004h]0;jshah@TIGER01935: /home[01;32mjshah@TIGER01935[00m:[01;34m/home[00m$ ls
+[?2004l[0m[01;34mjshah[0m
+[?2004h]0;jshah@TIGER01935: /home[01;32mjshah@TIGER01935[00m:[01;34m/home[00m$ cd ..
+[?2004l[?2004h]0;jshah@TIGER01935: /[01;32mjshah@TIGER01935[00m:[01;34m/[00m$ ls
+[?2004l[0m[01;36mbin[0m   [01;34mdev[0m  [01;34mhome[0m  [01;36mlib[0m    [01;36mlib64[0m   [01;34mlost+found[0m  [01;34mmnt[0m  [01;34mproc[0m  [01;34mrun[0m   [01;34msnap[0m  [01;34msys[0m  [01;34musr[0m
+[01;34mboot[0m  [01;34metc[0m  [01;32minit[0m  [01;36mlib32[0m  [01;36mlibx32[0m  [01;34mmedia[0m       [01;34mopt[0m  [01;34mroot[0m  [01;36msbin[0m  [01;34msrv[0m   [30;42mtmp[0m  [01;34mvar[0m
+[?2004h]0;jshah@TIGER01935: /[01;32mjshah@TIGER01935[00m:[01;34m/[00m$ cd home/jshah/
+[?2004l[?2004h]0;jshah@TIGER01935: ~[01;32mjshah@TIGER01935[00m:[01;34m~[00m$ cd .ssh
+[?2004lbash: cd: .ssh: No such file or directory
+[?2004h]0;jshah@TIGER01935: ~[01;32mjshah@TIGER01935[00m:[01;34m~[00m$ cd u[K..
+[?2004l[?2004h]0;jshah@TIGER01935: /home[01;32mjshah@TIGER01935[00m:[01;34m/home[00m$ ls
+[?2004l[0m[01;34mjshah[0m
+[?2004h]0;jshah@TIGER01935: /home[01;32mjshah@TIGER01935[00m:[01;34m/home[00m$ cd ..
+[?2004l[?2004h]0;jshah@TIGER01935: /[01;32mjshah@TIGER01935[00m:[01;34m/[00m$ cd[K[Kls'
+[?2004l[?2004h> ls
+[?2004l[?2004h> '4[K
+[?2004lls
+ls
+: command not found
+[?2004h]0;jshah@TIGER01935: /[01;32mjshah@TIGER01935[00m:[01;34m/[00m$ ls
+[?2004l[0m[01;36mbin[0m   [01;34mdev[0m  [01;34mhome[0m  [01;36mlib[0m    [01;36mlib64[0m   [01;34mlost+found[0m  [01;34mmnt[0m  [01;34mproc[0m  [01;34mrun[0m   [01;34msnap[0m  [01;34msys[0m  [01;34musr[0m
+[01;34mboot[0m  [01;34metc[0m  [01;32minit[0m  [01;36mlib32[0m  [01;36mlibx32[0m  [01;34mmedia[0m       [01;34mopt[0m  [01;34mroot[0m  [01;36msbin[0m  [01;34msrv[0m   [30;42mtmp[0m  [01;34mvar[0m
+[?2004h]0;jshah@TIGER01935: /[01;32mjshah@TIGER01935[00m:[01;34m/[00m$ cd usr/
+[?2004l[?2004h]0;jshah@TIGER01935: /usr[01;32mjshah@TIGER01935[00m:[01;34m/usr[00m$ ls
+[?2004l[0m[01;34mbin[0m  [01;34mgames[0m  [01;34minclude[0m  [01;34mlib[0m  [01;34mlib32[0m  [01;34mlib64[0m  [01;34mlibexec[0m  [01;34mlibx32[0m  [01;34mlocal[0m  [01;34msbin[0m  [01;34mshare[0m  [01;34msrc[0m
+[?2004h]0;jshah@TIGER01935: /usr[01;32mjshah@TIGER01935[00m:[01;34m/usr[00m$ [7mls -a[27mls -a
+[?2004l[0m[01;34m.[0m  [01;34m..[0m  [01;34mbin[0m  [01;34mgames[0m  [01;34minclude[0m  [01;34mlib[0m  [01;34mlib32[0m  [01;34mlib64[0m  [01;34mlibexec[0m  [01;34mlibx32[0m  [01;34mlocal[0m  [01;34msbin[0m  [01;34mshare[0m  [01;34msrc[0m
+[?2004h]0;jshah@TIGER01935: /usr[01;32mjshah@TIGER01935[00m:[01;34m/usr[00m$ cd .
+[?2004l[?2004h]0;jshah@TIGER01935: /usr[01;32mjshah@TIGER01935[00m:[01;34m/usr[00m$ ls
+[?2004l[0m[01;34mbin[0m  [01;34mgames[0m  [01;34minclude[0m  [01;34mlib[0m  [01;34mlib32[0m  [01;34mlib64[0m  [01;34mlibexec[0m  [01;34mlibx32[0m  [01;34mlocal[0m  [01;34msbin[0m  [01;34mshare[0m  [01;34msrc[0m
+[?2004h]0;jshah@TIGER01935: /usr[01;32mjshah@TIGER01935[00m:[01;34m/usr[00m$ lscd .ls -a
+[?2004l[0m[01;34m.[0m  [01;34m..[0m  [01;34mbin[0m  [01;34mgames[0m  [01;34minclude[0m  [01;34mlib[0m  [01;34mlib32[0m  [01;34mlib64[0m  [01;34mlibexec[0m  [01;34mlibx32[0m  [01;34mlocal[0m  [01;34msbin[0m  [01;34mshare[0m  [01;34msrc[0m
+[?2004h]0;jshah@TIGER01935: /usr[01;32mjshah@TIGER01935[00m:[01;34m/usr[00m$ cd ..
+[?2004l[?2004h]0;jshah@TIGER01935: /[01;32mjshah@TIGER01935[00m:[01;34m/[00m$ cd home/jshah/
+[?2004l[?2004h]0;jshah@TIGER01935: ~[01;32mjshah@TIGER01935[00m:[01;34m~[00m$ cd home/jshah/..[Kls -a
+[?2004l[0m[01;34m.[0m              .bash_logout  .lesshst     .profile                   [01;34mblink[0m                my_unix_session
+[01;34m..[0m             .bashrc       [01;34m.local[0m       .sudo_as_admin_successful  my_github_session_1  my_unix_session_1
+.bash_history  .gitconfig    .motd_shown  .viminfo                   my_github_session_2
+[?2004h]0;jshah@TIGER01935: ~[01;32mjshah@TIGER01935[00m:[01;34m~[00m$ [7msudo mkdir /home/user_name/sshfolder[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo mkdir /home/user_name/sshfolder[C[1P/sshfolder[1P/sshfolder[1P/sshfolder[1P/sshfolder[1P/sshfolder[1P/sshfolder[1P/sshfolder[1P/sshfolder[1P/sshfolderj/sshfolders/sshfolderh/sshfoldera/sshfolderh/sshfolder
+[?2004l[sudo] password for jshah: 
+[?2004h]0;jshah@TIGER01935: ~[01;32mjshah@TIGER01935[00m:[01;34m~[00m$ [7msudo cp /home/jshah/.ssh/* /home/jshah/sshfolder/[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo cp /home/jshah/.ssh/* /home/jshah/sshfolder/
+[?2004lcp: cannot stat '/home/jshah/.ssh/*': No such file or directory
+[?2004h]0;jshah@TIGER01935: ~[01;32mjshah@TIGER01935[00m:[01;34m~[00m$ exit
+[?2004lexit
+
+Script done on 2023-05-02 11:57:46+05:30 [COMMAND_EXIT_CODE="1"]
